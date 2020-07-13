@@ -21,7 +21,7 @@ namespace EmployeeManagement
     {
         private IConfiguration _config;
 
-        public Startup(IConfiguration config)
+        public MyStartup(IConfiguration config)
         {
             _config = config;
         }
