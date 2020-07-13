@@ -28,6 +28,6 @@ namespace EmployeeManagement
                     logging.AddEventSourceLogger();
                     logging.AddNLog();
                 })
-                .UseStartup<Startup>();
+                .UseStartup<MyStartup>();
     }
 }

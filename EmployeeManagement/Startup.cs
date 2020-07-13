@@ -17,7 +17,7 @@ using Microsoft.Extensions.Logging;
 
 namespace EmployeeManagement
 {
-    public class Startup
+    public class MyStartup
     {
         private IConfiguration _config;
 
