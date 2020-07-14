@@ -18,8 +18,7 @@ namespace EmployeeManagement
             CreateWebHostBuilder(args).Build().Run();
         }
 
-        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
+        public static IWebHostBuilder CreateWebHostBuilder(string[] args) => WebHost.CreateDefaultBuilder(args)
                 .ConfigureLogging((hostingContext, logging) =>
                 {
                     logging.AddConfiguration(hostingContext.Configuration.GetSection("Logging"));
@@ -28,6 +27,6 @@ namespace EmployeeManagement
                     logging.AddEventSourceLogger();
                     logging.AddNLog();
                 })
-                .UseStartup<MyStartup>();
+                .UseStartup<Startup>();
     }
 }

@@ -17,11 +17,12 @@ using Microsoft.Extensions.Logging;
 
 namespace EmployeeManagement
 {
-    public class MyStartup
+    public class Startup
     {
         private IConfiguration _config;
 
-        public MyStartup(IConfiguration config)
+        //The Startup class must include a Configure method and can optionally include ConfigureService method.
+        public Startup(IConfiguration config)
         {
             _config = config;
         }
@@ -99,6 +100,7 @@ namespace EmployeeManagement
             services.AddSingleton<DataProtectionPurposeStrings>();
         }
 
+        //The Configure method is used to specify how the app responds to HTTP requests
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
