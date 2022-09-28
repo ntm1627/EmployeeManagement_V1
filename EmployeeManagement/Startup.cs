@@ -21,6 +21,7 @@ namespace EmployeeManagement
     {
         private IConfiguration _config;
 
+        //The Startup class must include a Configure method and can optionally include ConfigureService method.
         public Startup(IConfiguration config)
         {
             _config = config;
@@ -99,6 +100,7 @@ namespace EmployeeManagement
             services.AddSingleton<DataProtectionPurposeStrings>();
         }
 
+        //The Configure method is used to specify how the app responds to HTTP requests
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
@@ -116,6 +118,7 @@ namespace EmployeeManagement
             app.UseMvc(routes =>
             {
                 routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}");
+
             });
         }
     }
