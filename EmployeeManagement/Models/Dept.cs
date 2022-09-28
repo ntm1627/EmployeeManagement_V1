@@ -10,6 +10,7 @@ namespace EmployeeManagement.Models
         None,
         HR,
         IT,
-        Payroll
+        Payroll,
+        Accounting
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Moq;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,6 +18,10 @@ namespace EmployeeManagement.Models
                 new Employee() { Id = 2, Name = "John", Department = Dept.IT, Email = "john@pragimtech.com" },
                 new Employee() { Id = 3, Name = "Sam", Department = Dept.IT, Email = "sam@pragimtech.com" },
             };
+
+      //      var reposi
+      //      tory = new Mock<IEmployeeRepository<Employee>>();   just to show how to use the mock framework
+
         }
 
         public Employee Add(Employee employee)
@@ -24,6 +29,7 @@ namespace EmployeeManagement.Models
             employee.Id = _employeeList.Max(e => e.Id) + 1;
             _employeeList.Add(employee);
             return employee;
+
         }
 
         public Employee Delete(int id)
